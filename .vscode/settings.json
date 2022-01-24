@@ -1,0 +1,52 @@
+{
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "terminal.integrated.shell.osx": "${env:SHELL}",
+  "editor.fontFamily": "'Meslo LG S for Powerline', Menlo, Monaco, 'Courier New', monospace",
+  "workbench.colorCustomizations": {
+      "terminal.background":"#002B36",
+      "terminal.foreground":"#93A1A1",
+      "terminalCursor.background":"#93A1A1",
+      "terminalCursor.foreground":"#93A1A1",
+      "terminal.ansiBlack":"#002B36",
+      "terminal.ansiBlue":"#268BD2",
+      "terminal.ansiBrightBlack":"#657B83",
+      "terminal.ansiBrightBlue":"#268BD2",
+      "terminal.ansiBrightCyan":"#2AA198",
+      "terminal.ansiBrightGreen":"#859900",
+      "terminal.ansiBrightMagenta":"#6C71C4",
+      "terminal.ansiBrightRed":"#DC322F",
+      "terminal.ansiBrightWhite":"#FDF6E3",
+      "terminal.ansiBrightYellow":"#B58900",
+      "terminal.ansiCyan":"#2AA198",
+      "terminal.ansiGreen":"#859900",
+      "terminal.ansiMagenta":"#6C71C4",
+      "terminal.ansiRed":"#DC322F",
+      "terminal.ansiWhite":"#93A1A1",
+      "terminal.ansiYellow":"#B58900"
+  },
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "eslint.alwaysShowStatus": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "eslint.format.enable": true,
+  "highlight.regexes": {
+      "(css[a-zA-Z0-9_]+)": {
+          "filterFileRegex": ".*(jsx|tsx)$",
+          "decorations": [
+              {
+                  "color": "OldLace",
+              }
+          ]
+      }
+  },
+  "[prisma]": {
+      "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "cSpell.userWords": [
+      "sidenav",
+      "stylelint"
+  ]
+}
