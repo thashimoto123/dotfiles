@@ -12,6 +12,7 @@
   ui = auto
 [alias]
   a = "!git status --short | peco | awk '{print $2}' | xargs git add"
+  res = "!git diff --name-only --cached | peco | awk '{print $1}' | xargs git restore --staged"
   d = diff
   co = checkout
   cop = !"git branch | tr -d '* ' | grep -v -e '->' | peco | sed -e 's+remotes/[^/]*/++g' | xargs git checkout"
