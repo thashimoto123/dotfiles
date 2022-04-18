@@ -19,6 +19,7 @@
   copa = !"git branch --all | tr -d '* ' | grep -v -e '->' | peco | sed -e 's+remotes/[^/]*/++g' | xargs git checkout"
   ci = commit
   ca = commit -a
+  cf = !git log --pretty=format:'%h [%an] : %s' | peco | awk 'END { printf(\"--fixup=%s\", $1)  }' | xargs git commit
   ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
   pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
   st = status
