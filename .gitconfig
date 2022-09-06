@@ -20,6 +20,7 @@
   ci = commit
   ca = commit -a
   cf = !git log --pretty=format:'%h [%an] : %s' | peco | awk 'END { printf(\"--fixup=%s\", $1)  }' | xargs git commit
+  chp = cherry-pick
   ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
   pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
   st = status
@@ -29,7 +30,8 @@
   bn = branch --no-merged
   df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
   hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
-  llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+  llog = log --graph --name-status --pretty=format:\"%C(green)%h %C(reset)(%cd) %C(blue)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+  log1 = log --pretty=format:\"%C(green)%h %C(blue)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
   open = "!hub browse"
   type = cat-file -t
   dump = cat-file -p
@@ -38,3 +40,7 @@
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   # add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  sts = !'git stash save -u'
+  apply = !"git stash list | tr -d ':' | peco | awk '{print $1}' | xargs git stash apply"
+  stash-diff = !"git stash list | tr -d ':' | peco | awk '{print $1}' | xargs git diff"
+  stls = !"git stash list"
