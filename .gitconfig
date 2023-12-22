@@ -1,6 +1,6 @@
 [user]
-  name = thashimoto
-  email = thahsimoto@me
+	name = thashimoto123
+	email = thahsimoto@.me
 [push]
   default = simple
 [color]
@@ -45,4 +45,4 @@
   stash-diff = !"git stash list | tr -d ':' | peco | awk '{print $1}' | xargs git diff"
   stls = !"git stash list"
 [rebase]
-  autosquash = true
+	autosquash = true
